@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import { requestTrackingPermission } from 'react-native-tracking-transparency';
 import { getAdvertisingInfo } from 'react-native-advertising-info';
 import { JSHash, CONSTANTS } from 'react-native-hash';
-// import { HcpBuilder } from 'react-native-doceree-ads';
+import { HcpBuilder } from 'react-native-doceree-ads';
 
 const HomeScreen = () => {
 
@@ -39,23 +39,23 @@ const HomeScreen = () => {
     const promiseHcpId = JSHash("5432112", CONSTANTS.HashAlgorithms.sha256);
     const promiseHcpEmail = JSHash("doceree@yopmail.com", CONSTANTS.HashAlgorithms.sha256);
 
-    // Promise.all([promiseHcpId, promiseHcpEmail]).then((values) => {
-    //   const hcpBuilder = new HcpBuilder();
-    //   hcpBuilder.setHcpId("54321");
-    //   hcpBuilder.setHashedHcpId(values[0]);
-    //   hcpBuilder.setFirstName("John");
-    //   hcpBuilder.setLastName("Doe");
-    //   hcpBuilder.setEmail("doceree@yopmail.com");
-    //   hcpBuilder.setSpecialization("Anesthesiology");
-    //   hcpBuilder.setOrganisation("XYZ-organisation");
-    //   hcpBuilder.setCity("New Delhi");
-    //   hcpBuilder.setState("Delhi");
-    //   hcpBuilder.setCountry("INDIA");
-    //   hcpBuilder.setZipCode("110024");
-    //   hcpBuilder.setGender("Male");
-    //   hcpBuilder.setHashedEmail(values[1]);
-    //   hcpBuilder.build();
-    // });
+    Promise.all([promiseHcpId, promiseHcpEmail]).then((values) => {
+      const hcpBuilder = new HcpBuilder();
+      hcpBuilder.setHcpId("54321");
+      hcpBuilder.setHashedHcpId(values[0]);
+      hcpBuilder.setFirstName("John");
+      hcpBuilder.setLastName("Doe");
+      hcpBuilder.setEmail("doceree@yopmail.com");
+      hcpBuilder.setSpecialization("Anesthesiology");
+      hcpBuilder.setOrganisation("XYZ-organisation");
+      hcpBuilder.setCity("New Delhi");
+      hcpBuilder.setState("Delhi");
+      hcpBuilder.setCountry("INDIA");
+      hcpBuilder.setZipCode("110024");
+      hcpBuilder.setGender("Male");
+      hcpBuilder.setHashedEmail(values[1]);
+      hcpBuilder.build();
+    });
   };
 
   return (

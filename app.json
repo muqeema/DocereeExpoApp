@@ -14,14 +14,18 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ahmadmuqeem.DocereeExpoApp"
+      "bundleIdentifier": "com.ahmadmuqeem.DocereeExpoApp",
+      "infoPlist": {
+        "NSUserTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.ahmadmuqeem.DocereeExpoApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
